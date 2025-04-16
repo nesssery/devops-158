@@ -1,0 +1,1 @@
+sudo docker-compose -f docker-compose-djet-dev.yml up -d
