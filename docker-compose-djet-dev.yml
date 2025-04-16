@@ -24,7 +24,7 @@ services:
   #     - apromacnetwork
 
 networks:
-  apromacnetwork:
+  djetcorporatenetwork:
     external: true
 
 
