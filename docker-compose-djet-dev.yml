@@ -21,7 +21,7 @@ services:
     volumes:
       - djetcorporate:/datastore/djet-corporate
     networks:
-      - apromacnetwork
+      - djetcorporatenetwork
 
 networks:
   djetcorporatenetwork:
