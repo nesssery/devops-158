@@ -6,22 +6,22 @@ services:
     ports:
       - "8012:8012"
     volumes:
-      - djetcorporate:/datastore/djet-corporate-back
+      - djetcorporate:/datastore/djet-corporate
     networks:
       - djetcorporatenetwork
 
-  # apromac-front:
-  #   image: joolinternational/joolhub:apromac-front-1.0.4v-alpha
-  #   restart: always
-  #   container_name: "apromac-front"
-  #   depends_on:
-  #     - apromac-back
-  #   ports:
-  #     - "5000:5000"
-  #   volumes:
-  #     - apromac:/datastore/apromac
-  #   networks:
-  #     - apromacnetwork
+  djet-corporate-front:
+    image : joolinternational/joolhub:djet-corporate-frontend-1.0.0a-latest
+    restart: always
+    container_name: "djet-corporate-front"
+    depends_on:
+      - djet-corporate-back
+    ports:
+      - "5000:5000"
+    volumes:
+      - djetcorporate:/datastore/djet-corporate
+    networks:
+      - apromacnetwork
 
 networks:
   djetcorporatenetwork:
@@ -34,4 +34,4 @@ volumes:
     driver_opts:
       type: none
       o: bind
-      device: /datastore/djet-corporate-back
+      device: /datastore/djet-corporate
