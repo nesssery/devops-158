@@ -1,12 +1,12 @@
 services:
   djet-corporate-back:
-    image: joolinternational/joolhub:djet-corporate-1.0.1c-latest
+    image: joolinternational/joolhub:djet-corporate-1.0.1d-latest
     restart: always
     container_name: "djet-corporate-back"
     ports:
       - "8012:8012"
     volumes:
-      - djetcorporate:/datastore/djet-corporate
+      - djetcorporate:/datastore/djetcorporate
     networks:
       - djetcorporatenetwork
 
@@ -19,7 +19,7 @@ services:
     ports:
       - "5000:5000"
     volumes:
-      - djetcorporate:/datastore/djet-corporate
+      - djetcorporate:/datastore/djetcorporate
     networks:
       - djetcorporatenetwork
 
@@ -34,4 +34,4 @@ volumes:
     driver_opts:
       type: none
       o: bind
-      device: /datastore/djet-corporate
+      device: /datastore/djetcorporate
