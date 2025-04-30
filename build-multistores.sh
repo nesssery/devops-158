@@ -1,0 +1,1 @@
+sudo docker-compose -f docker-compose-multistore-prod.yml up -d

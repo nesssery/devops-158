@@ -1,0 +1,25 @@
+services:
+  multi-stores-back:
+    image: joolinternational/joolhub:multistores-1.0.0a-latest
+    restart: always
+    container_name: "multi-stores-back"
+    ports:
+      - "8018:8018"
+    volumes:
+      - multistores:/datastore/multistores
+    networks:
+      - multistoresnetwork
+
+
+networks:
+  multistoresnetwork:
+    external: true
+
+
+volumes:
+  multistores:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /datastore/multistores
