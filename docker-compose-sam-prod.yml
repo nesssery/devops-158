@@ -1,0 +1,24 @@
+services:
+  djet-corporate-back:
+    image: joolinternational/joolhub:sam-auto-services-1.0.0b-latest
+    restart: always
+    container_name: "sam-auto-services"
+    ports:
+      - "8012:8012"
+    volumes:
+      - samautoservices:/datastore/samautoservices
+    networks:
+      - samautoservicesnetwork
+
+networks:
+  samautoservicesnetwork:
+    external: true
+
+
+volumes:
+  samautoservices:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /datastore/samautoservices
