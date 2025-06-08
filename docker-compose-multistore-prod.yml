@@ -1,6 +1,6 @@
 services:
   multi-stores-back:
-    image: joolinternational/joolhub:multistores-1.0.0b-latest
+    image: joolinternational/joolhub:multistores-1.0.0c-latest
     restart: always
     container_name: "multi-stores-back"
     ports:
