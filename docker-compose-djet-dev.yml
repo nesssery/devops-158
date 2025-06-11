@@ -12,7 +12,7 @@ services:
 
   djet-corporate-front:
     image : joolinternational/joolhub:djet-corporate-frontend-1.0.0k-latest
-    restart: always-
+    restart: always
     container_name: "djet-corporate-front"
     depends_on:
       - djet-corporate-back
