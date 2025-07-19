@@ -1,0 +1,24 @@
+services:
+  code-generator-back:
+    image: joolinternational/joolhub:code-generator-1.0.0b-latest
+    restart: always
+    container_name: "code-generator-back"
+    ports:
+      - "8030:8030"
+    volumes:
+      - codegenerator:/datastore/codegenerator
+    networks:
+      - codegeneratornetwork
+
+networks:
+  codegeneratornetwork:
+    external: true
+
+
+volumes:
+  codegenerator:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /datastore/codegenerator

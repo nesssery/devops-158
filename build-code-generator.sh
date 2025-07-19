@@ -1,0 +1,1 @@
+sudo docker-compose -f docker-compose-code-generator.yml up -d
