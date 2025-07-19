@@ -1,6 +1,6 @@
 services:
   code-generator-back:
-    image: joolinternational/joolhub:code-generator-1.0.0c-latest
+    image: joolinternational/joolhub:code-generator-1.0.0d-latest
     restart: always
     container_name: "code-generator-back"
     ports:
