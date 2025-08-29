@@ -1,0 +1,1 @@
+sudo docker-compose -f docker-compose-sam-prod.yml up -d
