@@ -1,6 +1,6 @@
 services:
   djet-corporate-back:
-    image: joolinternational/joolhub:sam-auto-services-1.0.0c-latest
+    image: joolinternational/joolhub:sam-auto-services-1.0.0d-latest
     restart: always
     container_name: "sam-auto-services"
     ports:
