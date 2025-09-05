@@ -1,6 +1,6 @@
 services:
   djet-corporate-back:
-    image: joolinternational/joolhub:djet-corporate-1.0.4c-latest
+    image: joolinternational/joolhub:djet-corporate-1.0.4d-latest
     restart: always
     container_name: "djet-corporate-back"
     ports:
